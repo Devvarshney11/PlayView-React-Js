@@ -1,4 +1,5 @@
 import { useSelector } from "react-redux";
+import "../App.css"
 
 const SideBarCard = ({name})=>{ 
   return (
@@ -12,26 +13,24 @@ const moreList = ["Settings", "Report History", "Help", "Send Feedback"]
 const Sidebar = () => {
   const toggle = useSelector((state)=>state.app.isMenuOpen);
   if(!toggle) return null;
-  return (
-    <div className="flex w-2/5">
-      <div className="flex flex-col h-screen bg-black overflow-y-auto">
+  return ( 
+      <div className=" focus:bg-zinc-300 flex flex-col h-full bg-black w-[240px] no-scrollbar  md:block md:relative  translate-x-[-240] md:translate-x-0 absolute transition-all overflow-y-scroll">
         <div className="flex flex-col">
-          {mainList.map((name, index) => <SideBarCard key={index} name={name}/>)}
+          {mainList.map((name, index) => <SideBarCard key={index+name} name={name}/>)}
         </div>
         <div className="flex flex-col mt-5">
-          <h1 className="text-white text-xl font-bold">Library</h1>
-          {yourList.map((name, index) => <SideBarCard key={index} name={name}/>)}
+          <h1 className="text-white text-xl font-bold text-center">Library</h1>
+          {yourList.map((name, index) => <SideBarCard key={index+name} name={name}/>)}
         </div>
         <div className="flex flex-col mt-5">
-          <h1 className="text-white text-xl font-bold">Explore</h1>
-          {exploreList.map((name, index) => <SideBarCard key={index} name={name}/>)}
+          <h1 className="text-white text-xl font-bold text-center">Explore</h1>
+          {exploreList.map((name, index) => <SideBarCard key={index+name} name={name}/>)}
         </div>
         <div className="flex flex-col mt-5">
-          <h1 className="text-white text-xl font-bold">More From Youtube</h1>
-          {moreList.map((name, index) => <SideBarCard key={index} name={name}/>)}
+          <h1 className="text-white text-xl font-bold text-center">More From Youtube</h1>
+          {moreList.map((name, index) => <SideBarCard key={index+name} name={name}/>)}
         </div>
       </div>
-    </div>
   );
 };
 
