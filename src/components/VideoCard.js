@@ -9,7 +9,7 @@ const VideoCard = ({item}) => {
       alt="Video Thumbnail"
     />
     <h2 className="text-lg font-semibold mb-2">{title}</h2>
-    <p className="text-sm text-gray-400 mb-4">{channelTitle} • {statistics.viewCount} views • 2 days ago</p>
+    <p className="text-sm text-gray-400 mb-4">{channelTitle} • 2 days ago</p>
     </div>
   )
 }

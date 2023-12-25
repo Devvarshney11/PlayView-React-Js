@@ -1,10 +1,11 @@
 import { Youtube_Logo_CDN, Youtube_Search_Api } from "../utils/constants";
-import { useDispatch ,useSelector} from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { toggleMenu } from "../utils/appSlice";
 import { setSearch } from "../utils/searchSlice";
 import { useState, useEffect } from "react";
+import { setSearchVideos } from "../utils/searchVideosSlice";
 const Header = () => {
-  const search = useSelector(state => state.search);
+  const search = useSelector((state) => state.search);
   const [searchText, setSearchText] = useState("");
   const [suggestions, setSuggestions] = useState();
   const [showSuggestions, setShowSuggestions] = useState(true);
@@ -12,16 +13,13 @@ const Header = () => {
     const response = await fetch(Youtube_Search_Api + searchText);
     const data = await response.json();
     setSuggestions(data[1]);
-    dispatch(setSearch({[searchText]:data[1]}));
+    dispatch(setSearch({ [searchText]: data[1] }));
   };
   useEffect(() => {
     setTimeout(() => {
-      if(search[searchText])
-      {
+      if (search[searchText]) {
         setSuggestions(search[searchText]);
-      }
-      else 
-      {
+      } else {
         console.log("apicall");
         getSuggestions();
       }
@@ -59,7 +57,11 @@ const Header = () => {
             onFocus={() => setShowSuggestions(true)}
             onBlur={() => setShowSuggestions(false)}
           />
-          <button className="py-2 px-3 rounded-r-full border-gray-400 border-2 bg-gray-400 text-white">
+          <button className="py-2 px-3 rounded-r-full border-gray-400 border-2 bg-gray-400 text-white"
+          onClick={()=>
+          {
+            dispatch(setSearchVideos(searchText));
+          }}>
             Search
           </button>
         </div>
