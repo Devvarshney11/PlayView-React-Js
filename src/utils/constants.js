@@ -3,3 +3,124 @@ export const Youtube_Logo_CDN = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA
 const YOUR_API_KEY = "AIzaSyCqPSHxA-7gtoBD5fVr6XEyE6VZNN0Tr08";
 export const Youtube_API_CDN = "https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=50&regionCode=IN&key="+YOUR_API_KEY;
 export const Youtube_Search_Api = "http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q="
+
+export const commentData = [
+    {
+        username: "CodingMaster",
+        comment: "Your coding tutorials are so helpful!",
+        replies: [
+            {
+                username: "ProgrammingGeek",
+                comment: "I'm glad you find them useful. Anything specific you'd like to see in the next tutorial?",
+                replies: [
+                    {
+                        username: "CodingMaster",
+                        comment: "Could you do a video on advanced algorithms?",
+                        replies: []
+                    },
+                    {
+                        username: "ProgrammingNinja",
+                        comment: "Sure thing! I love diving into complex algorithms. Stay tuned!",
+                        replies: []
+                    }
+                ]
+            },
+            {
+                username: "TechEnthusiast",
+                comment: "These tutorials made me switch my major to computer science!",
+                replies: []
+            }
+        ]
+    },
+    {
+        username: "Gamer123",
+        comment: "Your gaming videos are epic! Can't get enough of them.",
+        replies: [
+            {
+                username: "GamingPro",
+                comment: "Thanks for the support! Any specific game you want to see next?",
+                replies: [
+                    {
+                        username: "Gamer123",
+                        comment: "How about a walkthrough for the latest RPG game?",
+                        replies: []
+                    },
+                    {
+                        username: "GameExpert",
+                        comment: "I'm on it! Expect a walkthrough soon.",
+                        replies: []
+                    }
+                ]
+            },
+            {
+                username: "CasualGamer",
+                comment: "I enjoy your content even though I'm not a hardcore gamer.",
+                replies: []
+            }
+        ]
+    },
+    {
+        username: "TravelExplorer",
+        comment: "Your travel vlogs inspire me to explore new places!",
+        replies: [
+            {
+                username: "AdventureSeeker",
+                comment: "I'm happy to hear that! Where's the next destination you want me to cover?",
+                replies: [
+                    {
+                        username: "TravelExplorer",
+                        comment: "How about a vlog on off-the-beaten-path locations?",
+                        replies: []
+                    },
+                    {
+                        username: "WanderlustDreamer",
+                        comment: "Yes, please! I love discovering hidden gems.",
+                        replies: []
+                    }
+                ]
+            },
+            {
+                username: "LocalExplorer",
+                comment: "Your videos make me appreciate my own city more.",
+                replies: []
+            }
+        ]
+    }, {
+        username: "User123",
+        comment: "Great video! I learned a lot.",
+        replies: [
+            {
+                username: "ChannelFan1",
+                comment: "Thanks! I'm glad you found it helpful.",
+                replies: [
+                    {
+                        username: "User123",
+                        comment: "Can you make more videos on this topic?",
+                        replies: []
+                    },
+                    {
+                        username: "ChannelFan2",
+                        comment: "Sure thing! I'll consider that for future videos.",
+                        replies: []
+                    }
+                ]
+            },
+            {
+                username: "User456",
+                comment: "This is the best channel ever!",
+                replies: []
+            }
+        ]
+    },
+    {
+        username: "NewViewer",
+        comment: "I just discovered this channel. It's awesome!",
+        replies: [
+            {
+                username: "ChannelCreator",
+                comment: "Welcome to the channel! I hope you enjoy the content.",
+                replies: []
+            }
+        ]
+    }
+]
