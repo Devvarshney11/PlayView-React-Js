@@ -45,7 +45,7 @@ const MainVideoContainer = () => {
       fetchVideos();
     else
       fetchSearchVideos();
-  },[]);
+  },[search]);
   return (
     <div className="grow w-[calc(100%-240px)] h-full">
       <div className="overflow-x-auto flex  p-4 no-scrollbar">
@@ -57,7 +57,7 @@ const MainVideoContainer = () => {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
         {videos?.map((item) => (
-          <Link to={"/watch?v="+item.id} key={item.id}>
+          <Link to={"/watch?v="+(item.id.videoId?item.id.videoId:item.id)} key={item.id.videoId?item.id.videoId:item.id}>
             <VideoCard item={item} />
           </Link>
         ))}
