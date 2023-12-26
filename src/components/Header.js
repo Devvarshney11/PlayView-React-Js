@@ -20,7 +20,6 @@ const Header = () => {
       if (search[searchText]) {
         setSuggestions(search[searchText]);
       } else {
-        console.log("apicall");
         getSuggestions();
       }
     }, 200);
