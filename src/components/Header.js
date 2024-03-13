@@ -40,11 +40,9 @@ const Header = () => {
         >
           menu
         </span>
-        <img
-          className="cursor-pointer w-28"
-          src={Youtube_Logo_CDN}
-          alt="youtube"
-        />
+        <span className="cursor-pointer w-28 text-red-500 font-bold text-4xl ">
+          PlayView
+        </span>
       </div>
       <div className="col-span-10">
         <div className="text-center">
@@ -56,17 +54,18 @@ const Header = () => {
             onFocus={() => setShowSuggestions(true)}
             onBlur={() => setShowSuggestions(false)}
           />
-          <button className="py-2 px-3 rounded-r-full border-gray-400 border-2 bg-gray-400 text-white"
-          onClick={()=>
-          {
-            dispatch(setSearchVideos(searchText));
-          }}>
+          <button
+            className="py-2 px-3 rounded-r-full border-gray-400 border-2 bg-gray-400 text-white"
+            onClick={() => {
+              dispatch(setSearchVideos(searchText));
+            }}
+          >
             Search
           </button>
         </div>
         <div className="absolute w-1/4">
           {showSuggestions && (
-            <ul className="bg-gray-700">
+            <ul className="bg-black text-white">
               {suggestions?.map((suggestion, index) => (
                 <li className="p-2" key={index}>
                   {suggestion}
